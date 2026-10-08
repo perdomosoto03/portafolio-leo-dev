@@ -22,7 +22,7 @@ export const strings = {
       caption2: 'Soporte TIC · ITLA',
       photoAlt: 'Leandro Perdomo sentado en una silla plegable, retrato en blanco y negro',
       facts: [
-        { v: '150', d: 'sucursales usan un servicio .NET que escribí' },
+        { v: '150', d: 'sucursales para las que desarrollé un monitor en .NET' },
         { v: '30 días', d: 'de ajustes sin costo después de publicar' },
         { v: 'ES / EN', d: 'sitios bilingües con React y TypeScript' },
       ],
@@ -99,7 +99,7 @@ export const strings = {
       caption2: 'IT Support · ITLA',
       photoAlt: 'Leandro Perdomo sitting on a folding chair, black and white portrait',
       facts: [
-        { v: '150', d: 'branches run a .NET service I wrote' },
+        { v: '150', d: 'branches I built a .NET monitor for' },
         { v: '30 days', d: 'of free tweaks after launch' },
         { v: 'ES / EN', d: 'bilingual sites with React and TypeScript' },
       ],

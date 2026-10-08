@@ -69,8 +69,8 @@ export const projects: Project[] = [
     year: '2026',
     category: { es: 'Software empresarial / servicio de Windows', en: 'Enterprise software / Windows service' },
     summary: {
-      es: 'Supervisor externo en C# / .NET que vigila el programa de las pizarras deportivas de una cadena con 150 sucursales y lo recupera cuando su memoria llega al límite.',
-      en: 'External C# / .NET supervisor that watches the sports-board app of a 150-branch chain and recovers it when its memory hits the limit.',
+      es: 'Supervisor externo en C# / .NET que mantiene funcionando las pizarras deportivas de una cadena con 150 sucursales. Una sola solución, instalada en cada sucursal.',
+      en: 'External C# / .NET supervisor that keeps the sports boards of a 150-branch chain running. One solution, installed at every branch.',
     },
     problem: {
       es: 'El programa de las pizarras (MainScreenDS.exe) consumía cada vez más memoria durante horas hasta cerrarse o dar "Out of memory". No había código fuente para corregirlo.',
@@ -83,23 +83,23 @@ export const projects: Project[] = [
     results: {
       es: [
         'Funciona sin tocar el programa original ni su inicio automático',
-        'Recuperación automática probada al llegar al umbral crítico',
+        'Problema resuelto en las 150 sucursales',
+        'Una sola solución desplegada con el mismo instalador en cada sucursal',
         'Protección contra ciclos de reinicio: límite de intentos y enfriamiento',
         'Instalador self-contained para Windows x64: no requiere instalar .NET',
-        'En pruebas piloto antes del despliegue en todas las sucursales',
       ],
       en: [
         'Works without touching the original app or its autostart',
-        'Automatic recovery tested at the critical threshold',
+        'Issue solved across all 150 branches',
+        'One solution, deployed with the same installer at every branch',
         'Restart-loop protection: attempt limits and cooldown',
         'Self-contained installer for Windows x64: no .NET install needed',
-        'In pilot testing before rollout to every branch',
       ],
     },
     tech: ['C#', '.NET 8', 'Windows Service', 'Win32 API (CreateProcessAsUser)', 'Logging'],
     highlight: {
-      value: '1.5 GB',
-      label: { es: 'límite de memoria que activa la recuperación', en: 'memory limit that triggers recovery' },
+      value: '150',
+      label: { es: 'sucursales con pizarras funcionando', en: 'branches with boards running' },
     },
   },
 ]

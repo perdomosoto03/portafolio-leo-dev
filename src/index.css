@@ -35,7 +35,7 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent
 /* Forma: sin bordes redondeados, sin sombras, sin degradados. Las secciones se separan con líneas. */
 @layer components {
   .wrap { @apply mx-auto w-full max-w-[1440px]; padding-inline: clamp(16px, 3.2vw, 40px); }
-  .section { @apply scroll-mt-16 py-20 md:py-28; }
+  .section { @apply scroll-mt-16 py-14 md:py-20; }
   .label { @apply font-display text-xs font-medium uppercase tracking-[0.08em] text-ink-soft; font-stretch: 100%; }
   .condensed { font-stretch: 62%; }
   .sec-title { @apply m-0 font-display font-extrabold uppercase leading-[0.9] tracking-[-0.01em]; font-stretch: 62%; font-size: clamp(48px, 7vw, 104px); }

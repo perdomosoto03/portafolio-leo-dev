@@ -22,14 +22,14 @@ export function Hero() {
           <span className="outline-text block animate-rise [animation-delay:80ms]">{h.last}</span>
         </h1>
 
-        <figure className="col-span-12 m-0 mt-8 self-start lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">
+        <figure className="order-1 col-span-12 m-0 mt-10 self-start lg:order-none lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">
           <img
             src="/leandro.jpg"
             alt={h.photoAlt}
             width={900}
             height={1200}
             fetchPriority="high"
-            className="block aspect-[3/4] w-full object-cover object-[50%_20%] grayscale"
+            className="block aspect-[4/5] w-full object-cover object-[50%_20%] grayscale lg:aspect-[3/4]"
           />
           <figcaption className="mt-2.5 flex justify-between gap-3">
             <span className="label">{h.caption1}</span>
@@ -37,7 +37,7 @@ export function Hero() {
           </figcaption>
         </figure>
 
-        <div className="col-span-12 mt-10 grid content-start gap-5 lg:col-span-7">
+        <div className="col-span-12 mt-8 grid content-start gap-5 lg:col-span-7 lg:mt-10">
           <p className="m-0 max-w-[22ch] text-balance font-display text-[clamp(26px,2.6vw,36px)] font-semibold leading-[1.12] tracking-[-0.015em]">
             {h.claimA}<em className="mark not-italic">{h.claimEm}</em>{h.claimB}
           </p>
@@ -50,7 +50,7 @@ export function Hero() {
           </div>
         </div>
 
-        <dl className="col-span-12 mt-16 grid border-t border-ink md:grid-cols-3">
+        <dl className="order-2 col-span-12 mt-16 grid border-t lg:order-none border-ink md:grid-cols-3">
           {h.facts.map((f, i) => (
             <div
               key={f.v}

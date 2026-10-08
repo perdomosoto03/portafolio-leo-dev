@@ -99,8 +99,9 @@ function MobileMenu({ links, onClose }: { links: Links; onClose: () => void }) {
         <LangToggle className="flex" />
         <ThemeToggle />
       </div>
-      <p className="mt-6 text-sm opacity-70">
-        WhatsApp {site.whatsappLabel} · <span className="break-all">{site.email}</span>
+      <p className="mt-6 grid gap-1 text-sm opacity-70">
+        <span>WhatsApp {site.whatsappLabel}</span>
+        <span>{site.email}</span>
       </p>
     </div>
   )

@@ -1,25 +1,30 @@
 import { LangProvider } from './i18n/LangContext'
-import { SkipLink, Nav, Hero, Services, Projects, Process, About, Contact, Footer, FloatingWhatsApp } from './components/Sections'
-import CodeBackground from './components/CodeBackground'
+import { SkipLink } from './components/Common'
+import { Nav } from './components/Nav'
+import { Hero } from './components/Hero'
+import { Services } from './components/Services'
+import { Projects } from './components/Projects'
+import { Process } from './components/Process'
+import { About } from './components/About'
+import { Footer } from './components/Footer'
+import { FloatingWhatsApp } from './components/FloatingWhatsApp'
 
 export default function App() {
   return (
     <LangProvider>
-      <SkipLink />
-      <Nav />
-      <div className="relative">
-        <CodeBackground />
-        <main id="main" tabIndex={-1} className="relative z-10 outline-none">
+      <div id="top">
+        <SkipLink />
+        <Nav />
+        <main id="main" tabIndex={-1} className="outline-none">
           <Hero />
-          <Services />
           <Projects />
+          <Services />
           <Process />
           <About />
-          <Contact />
         </main>
+        <Footer />
+        <FloatingWhatsApp />
       </div>
-      <Footer />
-      <FloatingWhatsApp />
     </LangProvider>
   )
 }

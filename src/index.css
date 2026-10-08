@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────── PALETA ─────────────
+   Claro + azul cobalto. Un solo acento en toda la página.
+   Para cambiar colores, edita solo estas variables (formato R G B). */
+@layer base {
+  :root {
+    color-scheme: light;
+    --canvas: 246 246 244;   /* fondo */
+    --surface: 255 255 255;  /* tarjetas */
+    --tint: 237 239 245;     /* fondo suave */
+    --ink: 22 24 29;         /* texto principal */
+    --muted: 90 96 112;      /* texto secundario */
+    --line: 227 228 232;     /* bordes */
+    --accent: 43 89 217;     /* azul cobalto */
+    --accent-deep: 24 52 140; /* cobalto oscuro, solo para degradados */
+    --on-accent: 255 255 255;
+  }
+  .dark {
+    color-scheme: dark;
+    --canvas: 16 17 20;
+    --surface: 24 26 31;
+    --tint: 30 33 40;
+    --ink: 237 238 240;
+    --muted: 160 165 177;
+    --line: 42 45 53;
+    --accent: 125 155 242;
+    --accent-deep: 78 108 214;
+    --on-accent: 14 17 22;
+  }
+  body { @apply bg-canvas font-sans text-ink antialiased; }
+  ::selection { background: rgb(var(--accent) / 0.25); }
+}
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+a:focus-visible, button:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; }
+a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+/* Forma: botones, etiquetas y selectores = píldora. Contenedores = 16px (rounded-2xl). */
+.section { @apply mx-auto max-w-6xl scroll-mt-20 px-5 py-20 md:py-28; }
+.eyebrow { @apply font-mono text-xs font-medium uppercase tracking-[0.16em] text-accent; }
+.h2 { @apply text-balance text-3xl font-semibold tracking-tight text-ink md:text-4xl; }
+.btn { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-5 py-3 text-sm font-semibold transition active:scale-[0.98] motion-safe:hover:-translate-y-px; }
+.btn-primary { @apply btn bg-gradient-to-br from-accent to-accent-deep text-on-accent hover:brightness-110; }
+.btn-ghost { @apply btn border border-line bg-surface text-ink hover:border-ink/40; }
+.btn-inverse { @apply btn bg-on-accent text-accent hover:bg-on-accent/90; }
+.tag { @apply rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-ink; }
+
+@keyframes deco-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+.deco-float { animation: deco-float 9s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .deco-float { animation: none; } }

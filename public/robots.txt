@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leodev-rd.netlify.app/sitemap.xml

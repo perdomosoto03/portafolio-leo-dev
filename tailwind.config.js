@@ -5,25 +5,22 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Geist Variable"', 'system-ui', 'sans-serif'],
-        mono: ['"Geist Mono Variable"', 'ui-monospace', 'monospace'],
+        display: ['"Archivo Variable"', '"Arial Narrow"', 'Arial', 'sans-serif'],
+        sans: ['"Instrument Sans Variable"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
-      // Colores = variables CSS (ver index.css). Un solo acento, dos temas.
+      // Colores = variables CSS (ver index.css). Hueso, tinta y una sola señal.
       colors: {
-        canvas: 'rgb(var(--canvas) / <alpha-value>)',
-        surface: 'rgb(var(--surface) / <alpha-value>)',
-        tint: 'rgb(var(--tint) / <alpha-value>)',
+        paper: 'rgb(var(--paper) / <alpha-value>)',
+        'paper-2': 'rgb(var(--paper-2) / <alpha-value>)',
         ink: 'rgb(var(--ink) / <alpha-value>)',
-        muted: 'rgb(var(--muted) / <alpha-value>)',
-        line: 'rgb(var(--line) / <alpha-value>)',
-        accent: 'rgb(var(--accent) / <alpha-value>)',
-        'accent-deep': 'rgb(var(--accent-deep) / <alpha-value>)',
-        'on-accent': 'rgb(var(--on-accent) / <alpha-value>)',
+        'ink-soft': 'rgb(var(--ink-soft) / <alpha-value>)',
+        rule: 'rgb(var(--rule) / <alpha-value>)',
+        signal: 'rgb(var(--signal) / <alpha-value>)',
       },
       keyframes: {
-        fadeUp: { '0%': { opacity: '0', transform: 'translateY(16px)' }, '100%': { opacity: '1', transform: 'none' } },
+        rise: { '0%': { opacity: '0.001', transform: 'translateY(18%)' }, '100%': { opacity: '1', transform: 'none' } },
       },
-      animation: { 'fade-up': 'fadeUp .8s cubic-bezier(.16,1,.3,1) both' },
+      animation: { rise: 'rise .9s cubic-bezier(.16,1,.3,1) both' },
     },
   },
   plugins: [],

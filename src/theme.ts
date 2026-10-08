@@ -5,7 +5,7 @@ export const getTheme = (): Theme =>
 
 export function setTheme(t: Theme) {
   document.documentElement.classList.toggle('dark', t === 'dark')
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', t === 'dark' ? '#101114' : '#F6F6F4')
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', t === 'dark' ? '#141312' : '#EDEBE6')
   try { localStorage.setItem('theme', t) } catch { /* ignore */ }
   window.dispatchEvent(new Event('themechange'))
 }

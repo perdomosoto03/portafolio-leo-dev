@@ -17,6 +17,7 @@ export interface Project {
   results: Record<Lang, string[]> // logros concretos; usa números reales cuando los tengas
   tech: string[]
   image?: string
+  imageSrcSet?: string // versiones en varios anchos, ej: '/projects/x-600.webp 600w, /projects/x-1200.webp 1200w'
   codeSnippet?: string // se muestra si no hay imagen
   highlight?: { value: string; label: T } // cifra grande si no hay imagen
   liveUrl?: string
@@ -59,7 +60,8 @@ export const projects: Project[] = [
       ],
     },
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Netlify'],
-    image: '/projects/mme.jpg',
+    image: '/projects/mme-1200.webp',
+    imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
     liveUrl: 'https://multiserviciosmanuelesteban.netlify.app',
   },
   {

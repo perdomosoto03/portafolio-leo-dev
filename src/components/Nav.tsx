@@ -18,9 +18,9 @@ function LangToggle({ className = '' }: { className?: string }) {
             type="button"
             onClick={() => setLang(l)}
             aria-pressed={lang === l}
-            aria-label={name}
+            aria-label={`${l.toUpperCase()} (${name})`}
             lang={l}
-            className={`uppercase transition-opacity ${lang === l ? 'font-semibold' : 'opacity-55 hover:opacity-100'}`}
+            className={`uppercase transition-opacity ${lang === l ? 'font-semibold' : 'opacity-70 hover:opacity-100'}`}
           >
             {l}
           </button>

@@ -24,7 +24,9 @@ export function Hero() {
 
         <figure className="order-1 col-span-12 m-0 mt-10 self-start lg:order-none lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">
           <img
-            src="/leandro.jpg"
+            src="/leandro-900.webp"
+            srcSet="/leandro-480.webp 480w, /leandro-640.webp 640w, /leandro-900.webp 900w"
+            sizes="(min-width: 1024px) 30vw, 100vw"
             alt={h.photoAlt}
             width={900}
             height={1200}

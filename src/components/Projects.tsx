@@ -11,6 +11,8 @@ function ProjectMedia({ p }: { p: Project }) {
     return (
       <img
         src={p.image}
+        srcSet={p.imageSrcSet}
+        sizes="(min-width: 1024px) 38vw, 100vw"
         alt={p.title}
         width={1200}
         height={630}

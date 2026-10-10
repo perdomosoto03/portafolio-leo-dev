@@ -8,7 +8,7 @@ export const site = {
   whatsapp: '18294775920', // formato internacional, sin + ni guiones
   whatsappLabel: '829-477-5920',
   email: 'Perdomosoto03@gmail.com',
-  github: '', // ej: 'https://github.com/tu-usuario'  (vacío = se oculta)
+  github: 'https://github.com/perdomosoto03',
   linkedin: 'https://www.linkedin.com/in/leandro-perdomo-84a28b202/',
   cvUrl: '/cv-leandro-perdomo.pdf',
   photo: '', // ej: '/leandro.jpg' (pon la foto en /public). Vacío = se oculta

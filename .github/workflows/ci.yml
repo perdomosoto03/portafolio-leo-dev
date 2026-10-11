@@ -21,7 +21,18 @@ jobs:
       - run: npm ci
       - name: Lint
         run: npm run lint
+      - name: Pruebas de componentes y contenido (Vitest)
+        run: npm test
       - name: Tipos (modo estricto) y build
         run: npm run build
       - name: El build incluye seguridad y página 404
         run: test -f dist/_headers && test -f dist/404.html && test -f dist/theme-init.js
+      - name: Pruebas de extremo a extremo y accesibilidad (Playwright + axe)
+        run: npx playwright test
+      - name: Guardar reporte si algo falla
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-playwright
+          path: test-results
+          retention-days: 7

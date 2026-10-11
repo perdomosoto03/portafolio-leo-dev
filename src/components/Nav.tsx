@@ -57,17 +57,40 @@ function MobileMenu({ links, onClose }: { links: Links; onClose: () => void }) {
     if (!el) return
     const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+
+    // Lo que queda detrás del menú no se puede enfocar ni lo leen los lectores de pantalla.
+    const background = [
+      document.getElementById('main'),
+      document.getElementById('contacto'),
+      document.querySelector<HTMLElement>('[data-floating-wa]'),
+      el.parentElement?.querySelector<HTMLElement>(':scope > nav') ?? null,
+    ].filter((n): n is HTMLElement => n !== null)
+    background.forEach((n) => { n.inert = true })
+
     el.querySelector<HTMLElement>('button')?.focus()
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { onClose(); return }
       if (e.key !== 'Tab') return
       const items = el.querySelectorAll<HTMLElement>('a, button')
-      const first = items[0], last = items[items.length - 1]
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (!first || !last) return
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
     }
     window.addEventListener('keydown', onKey)
-    return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = prevOverflow }
+
+    // Si la pantalla pasa a tamaño escritorio (p. ej. al girar una tablet), el menú móvil ya no aplica.
+    const desktop = window.matchMedia('(min-width: 1024px)')
+    const onDesktop = (e: MediaQueryListEvent) => { if (e.matches) onClose() }
+    desktop.addEventListener('change', onDesktop)
+
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      desktop.removeEventListener('change', onDesktop)
+      background.forEach((n) => { n.inert = false })
+      document.body.style.overflow = prevOverflow
+    }
   }, [onClose])
 
   return (

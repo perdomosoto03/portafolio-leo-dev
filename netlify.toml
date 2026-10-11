@@ -1,0 +1,8 @@
+# Netlify construye el sitio desde este repositorio en cada push a main.
+# Los encabezados de seguridad y caché están en public/_headers (no duplicarlos aquí).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

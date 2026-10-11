@@ -1,0 +1,27 @@
+# Revisa cada cambio antes de que llegue al sitio publicado.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Tipos (modo estricto) y build
+        run: npm run build
+      - name: El build incluye seguridad y página 404
+        run: test -f dist/_headers && test -f dist/404.html && test -f dist/theme-init.js

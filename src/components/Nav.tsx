@@ -38,7 +38,7 @@ function ThemeToggle({ className = '' }: { className?: string }) {
       type="button"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       aria-label={theme === 'dark' ? t.nav.themeLight : t.nav.themeDark}
-      className={`grid h-8 w-8 place-items-center rounded-full border border-[color:color-mix(in_srgb,currentColor_25%,transparent)] transition-colors hover:text-signal ${className}`}
+      className={`grid h-8 w-8 place-items-center rounded-full border border-[color-mix(in_srgb,currentColor_25%,transparent)] transition-colors hover:text-signal ${className}`}
     >
       {theme === 'dark' ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
     </button>

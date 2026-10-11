@@ -15,7 +15,7 @@ export default function App() {
       <div id="top">
         <SkipLink />
         <Nav />
-        <main id="main" tabIndex={-1} className="outline-none">
+        <main id="main" tabIndex={-1} className="outline-hidden">
           <Hero />
           <Projects />
           <Services />

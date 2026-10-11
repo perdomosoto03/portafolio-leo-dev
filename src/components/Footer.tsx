@@ -10,12 +10,12 @@ export function Footer() {
   const { t } = useLang()
   const muted = 'text-paper/60 dark:text-ink-soft'
   const col = 'grid content-start gap-2 text-[15px]'
-  const lbl = 'label mb-1 !text-paper/60 dark:!text-ink-soft'
+  const lbl = 'label mb-1 text-paper/60! dark:text-ink-soft!'
   return (
     <footer id="contacto" className="scroll-mt-16 overflow-hidden bg-ink text-paper dark:bg-paper-2 dark:text-ink">
       <div className="wrap pt-20">
         <div className="grid grid-cols-2 gap-x-[clamp(16px,3.2vw,40px)] gap-y-10 lg:grid-cols-12">
-          <p className="col-span-2 m-0 max-w-[14ch] text-balance font-display text-[clamp(32px,3.6vw,52px)] font-bold leading-[1.05] tracking-[-0.015em] [font-stretch:85%] lg:col-span-5">
+          <p className="col-span-2 m-0 max-w-[14ch] text-balance font-display text-[clamp(32px,3.6vw,52px)] font-bold leading-[1.05] tracking-[-0.015em] font-stretch-85% lg:col-span-5">
             {t.footer.ask}
           </p>
           <div className={`${col} col-span-2 sm:col-span-1 lg:col-span-3`}>
@@ -42,7 +42,7 @@ export function Footer() {
           <a href="#top" className="hover:text-signal">{t.footer.top} ↑</a>
         </div>
 
-        <p aria-hidden="true" className="-mb-[5.5vw] mt-6 select-none whitespace-nowrap text-center font-display text-[31vw] font-black uppercase leading-[0.78] tracking-[-0.03em] condensed">
+        <p aria-hidden="true" className="mb-[-5.5vw] mt-6 select-none whitespace-nowrap text-center font-display text-[31vw] font-black uppercase leading-[0.78] tracking-[-0.03em] condensed">
           {site.brand}<span className="text-signal">.</span>
         </p>
       </div>

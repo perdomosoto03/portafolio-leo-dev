@@ -18,20 +18,20 @@ function ProjectMedia({ p }: { p: Project }) {
         height={630}
         loading="lazy"
         decoding="async"
-        className="block aspect-[4/3] w-full border border-rule bg-paper-2 object-contain p-4"
+        className="block aspect-4/3 w-full border border-rule bg-paper-2 object-contain p-4"
       />
     )
   }
   if (p.highlight) {
     return (
-      <div className="grid aspect-[4/3] w-full content-center justify-items-center gap-2 bg-ink p-6 text-center text-paper">
+      <div className="grid aspect-4/3 w-full content-center justify-items-center gap-2 bg-ink p-6 text-center text-paper">
         <span className="font-display text-[clamp(96px,14vw,180px)] font-black leading-[0.85] condensed">{p.highlight.value}</span>
-        <span className="label !text-paper/70">{p.highlight.label[lang]}</span>
+        <span className="label text-paper/70!">{p.highlight.label[lang]}</span>
       </div>
     )
   }
   return (
-    <pre className="aspect-[4/3] w-full overflow-hidden border border-rule bg-paper-2 p-5 text-[13px] leading-relaxed">
+    <pre className="aspect-4/3 w-full overflow-hidden border border-rule bg-paper-2 p-5 text-[13px] leading-relaxed">
       <code>{p.codeSnippet}</code>
     </pre>
   )
@@ -59,7 +59,7 @@ function ProjectRow({ p, open, onToggle }: { p: Project; open: boolean; onToggle
           {!open && (
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute right-20 top-1/2 hidden aspect-[4/3] w-56 -translate-y-1/2 -rotate-2 place-items-center border border-rule bg-paper-2 bg-cover bg-center font-display text-7xl font-black opacity-0 transition-opacity condensed group-hover:opacity-100 [@media(hover:hover)]:grid"
+              className="pointer-events-none absolute right-20 top-1/2 hidden aspect-4/3 w-56 -translate-y-1/2 -rotate-2 place-items-center border border-rule bg-paper-2 bg-cover bg-center font-display text-7xl font-black opacity-0 transition-opacity condensed group-hover:opacity-100 [@media(hover:hover)]:grid"
               style={p.image ? { backgroundImage: `url(${p.image})` } : undefined}
             >
               {!p.image && p.highlight?.value}

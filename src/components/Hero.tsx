@@ -22,7 +22,7 @@ export function Hero() {
           <span className="outline-text block animate-rise [animation-delay:80ms]">{h.last}</span>
         </h1>
 
-        <figure className="order-1 col-span-12 m-0 mt-10 self-start lg:order-none lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">
+        <figure className="order-1 col-span-12 m-0 mt-10 self-start lg:order-0 lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">
           <img
             src="/leandro-900.webp"
             srcSet="/leandro-480.webp 480w, /leandro-640.webp 640w, /leandro-900.webp 900w"
@@ -31,7 +31,7 @@ export function Hero() {
             width={900}
             height={1200}
             fetchPriority="high"
-            className="block aspect-[4/5] w-full object-cover object-[50%_20%] grayscale lg:aspect-[3/4]"
+            className="block aspect-4/5 w-full object-cover object-[50%_20%] grayscale lg:aspect-3/4"
           />
           <figcaption className="mt-2.5 flex justify-between gap-3">
             <span className="label">{h.caption1}</span>
@@ -52,7 +52,7 @@ export function Hero() {
           </div>
         </div>
 
-        <dl className="order-2 col-span-12 mt-16 grid border-t lg:order-none border-ink md:grid-cols-3">
+        <dl className="order-2 col-span-12 mt-16 grid border-t lg:order-0 border-ink md:grid-cols-3">
           {h.facts.map((f, i) => (
             <div
               key={f.v}

@@ -13,7 +13,7 @@ export function Process() {
               <span aria-hidden="true" className="outline-text block font-display text-[88px] font-black leading-none condensed">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <h3 className="mt-6 font-display text-2xl font-bold tracking-[-0.01em] [font-stretch:85%]">{s.t}</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold tracking-[-0.01em] font-stretch-85%">{s.t}</h3>
               <p className="mt-2 text-ink-soft">{s.d}</p>
             </li>
           ))}

@@ -21,7 +21,26 @@ const fontPreload = (): Plugin => ({
   },
 })
 
+// Genera sitemap.xml en cada build con la fecha del día (antes había que editarla a mano).
+const SITE_URL = 'https://leodev-rd.netlify.app/'
+const sitemap = (): Plugin => ({
+  name: 'sitemap',
+  apply: 'build',
+  generateBundle() {
+    const today = new Date().toISOString().slice(0, 10)
+    this.emitFile({
+      type: 'asset',
+      fileName: 'sitemap.xml',
+      source: `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${SITE_URL}</loc><lastmod>${today}</lastmod></url>
+</urlset>
+`,
+    })
+  },
+})
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), fontPreload()],
+  plugins: [react(), fontPreload(), sitemap()],
 })

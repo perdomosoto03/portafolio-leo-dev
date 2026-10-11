@@ -22,6 +22,43 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" type="image/webp" imagesrcset="/leandro-480.webp 480w, /leandro-640.webp 640w, /leandro-900.webp 900w" imagesizes="(min-width: 1024px) 30vw, 100vw" fetchpriority="high" />
     <script src="/theme-init.js"></script>
+    <!-- Datos estructurados para buscadores (schema.org). Mantener en sintonía con src/data/site.ts. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://leodev-rd.netlify.app/#leodev",
+            "name": "Leo Dev",
+            "url": "https://leodev-rd.netlify.app/",
+            "image": "https://leodev-rd.netlify.app/og-image.png",
+            "description": "Landing pages, sitios web para negocios y software a medida en C# / .NET. República Dominicana.",
+            "telephone": "+1-829-477-5920",
+            "areaServed": { "@type": "Country", "name": "República Dominicana" },
+            "address": { "@type": "PostalAddress", "addressCountry": "DO" },
+            "knowsLanguage": ["es", "en"],
+            "founder": { "@id": "https://leodev-rd.netlify.app/#leandro" },
+            "sameAs": [
+              "https://github.com/perdomosoto03",
+              "https://www.linkedin.com/in/leandro-perdomo-84a28b202/"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://leodev-rd.netlify.app/#leandro",
+            "name": "Leandro Perdomo Soto",
+            "jobTitle": "Desarrollador web y de software",
+            "url": "https://leodev-rd.netlify.app/",
+            "worksFor": { "@id": "https://leodev-rd.netlify.app/#leodev" },
+            "sameAs": [
+              "https://github.com/perdomosoto03",
+              "https://www.linkedin.com/in/leandro-perdomo-84a28b202/"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

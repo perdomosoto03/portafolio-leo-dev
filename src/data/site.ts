@@ -11,7 +11,6 @@ export const site = {
   github: 'https://github.com/perdomosoto03',
   linkedin: 'https://www.linkedin.com/in/leandro-perdomo-84a28b202/',
   cvUrl: '/cv-leandro-perdomo.pdf',
-  photo: '', // ej: '/leandro.jpg' (pon la foto en /public). Vacío = se oculta
 }
 
 export const stack = {

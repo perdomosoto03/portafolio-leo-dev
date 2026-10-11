@@ -165,7 +165,7 @@ export function Nav() {
         <div className="flex items-center justify-end gap-5 text-sm">
           <LangToggle className="hidden lg:flex" />
           <ThemeToggle className="hidden lg:grid" />
-          <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" className="link-cta hidden lg:inline">
+          <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" data-umami-event="whatsapp" data-umami-event-lugar="menu" className="link-cta hidden lg:inline">
             {t.nav.cta}<NewTab />
           </a>
           <button

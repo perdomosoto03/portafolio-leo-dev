@@ -20,7 +20,7 @@ export function Footer() {
           </p>
           <div className={`${col} col-span-2 sm:col-span-1 lg:col-span-3`}>
             <span className={lbl}>{t.footer.contact}</span>
-            <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" className="hover:text-signal">WhatsApp {site.whatsappLabel}<NewTab /></a>
+            <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" data-umami-event="whatsapp" data-umami-event-lugar="footer" className="hover:text-signal">WhatsApp {site.whatsappLabel}<NewTab /></a>
             <a href={`mailto:${site.email}`} className="break-all hover:text-signal lg:break-normal">{site.email}</a>
           </div>
           <div className={`${col} lg:col-span-2`}>

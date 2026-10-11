@@ -45,7 +45,7 @@ export function Hero() {
           </p>
           <p className="m-0 max-w-[54ch] text-ink-soft">{h.lede}</p>
           <div className="mt-1 flex flex-wrap items-center gap-6">
-            <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" className="btn-block">
+            <a href={waLink(t.contact.waMsg)} target="_blank" rel="noreferrer" data-umami-event="whatsapp" data-umami-event-lugar="hero" className="btn-block">
               {h.primary}<NewTab /> <ArrowIcon className="h-4 w-4" />
             </a>
             <a href="#proyectos" className="link-cta">{h.secondary}</a>

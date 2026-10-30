@@ -7,7 +7,7 @@ export const site = {
   location: 'República Dominicana',
   whatsapp: '18294775920', // formato internacional, sin + ni guiones
   whatsappLabel: '829-477-5920',
-  email: 'Perdomosoto03@gmail.com',
+  email: 'Perdomosoto00@gmail.com',
   github: 'https://github.com/perdomosoto03',
   linkedin: 'https://www.linkedin.com/in/leandro-perdomo-84a28b202/',
   cvUrl: '/cv-leandro-perdomo.pdf',

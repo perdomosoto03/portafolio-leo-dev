@@ -28,6 +28,47 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'posleodev',
+    title: 'POS Leo Dev',
+    type: 'software',
+    year: '2026',
+    category: { es: 'Producto propio / punto de venta en la nube', en: 'Own product / cloud point of sale' },
+    summary: {
+      es: 'Punto de venta en la nube para colmados, bodegas, ferreterías y tiendas de República Dominicana, con factura electrónica e-CF para la DGII.',
+      en: 'Cloud point of sale for Dominican corner stores, hardware stores and shops, with e-CF electronic invoicing for the DGII.',
+    },
+    problem: {
+      es: 'Con la Ley 32-23 los negocios con RNC deben pasar a comprobante fiscal electrónico (e-CF). Muchos colmados y tiendas pequeñas no tienen un sistema de caja que lo emita, ni forma de ver sus ventas desde el celular.',
+      en: 'Under Law 32-23, businesses with an RNC must move to electronic fiscal receipts (e-CF). Many small stores have no checkout system that issues them, nor a way to follow sales from their phone.',
+    },
+    solution: {
+      es: 'Aplicación web (PWA) con API en Node.js y PostgreSQL multi-negocio con seguridad por filas. La caja funciona sin internet y sincroniza después sin duplicar ventas. La factura e-CF sale por una cola de reintentos conectada por API a Alanube, un proveedor autorizado por la DGII.',
+      en: 'Web app (PWA) with a Node.js API and a multi-business PostgreSQL database with row-level security. The register works offline and syncs later without duplicating sales. The e-CF invoice goes through a retry queue connected by API to Alanube, a DGII-authorized provider.',
+    },
+    results: {
+      es: [
+        'Cobro en efectivo, tarjeta, transferencia y pago mixto, con fiado e inventario con alerta de stock bajo',
+        'Roles de cajero, supervisor y dueño, con PIN de supervisor y registro de auditoría',
+        'Cuadre de caja por turno, reportes y carga de catálogos grandes desde Excel',
+        'Prueba de carga local: 8.879 ventas con 0 errores y un comprobante consecutivo por venta',
+        'Sitio de presentación publicado y en etapa previa al piloto con el primer cliente',
+      ],
+      en: [
+        'Cash, card, transfer and split payments, with store credit and low-stock alerts',
+        'Cashier, supervisor and owner roles, with supervisor PIN and an audit log',
+        'Shift cash reconciliation, reports and large catalog import from Excel',
+        'Local load test: 8,879 sales with 0 errors and one sequential receipt per sale',
+        'Presentation site published and in the stage before the pilot with the first client',
+      ],
+    },
+    tech: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'PWA', 'e-CF / Alanube', 'Vitest'],
+    highlight: {
+      value: 'e-CF',
+      label: { es: 'factura electrónica para la DGII', en: 'electronic invoicing for the DGII' },
+    },
+    liveUrl: 'https://pos-leo-dev.netlify.app',
+  },
+  {
     id: 'mme',
     title: 'Multiservicios Manuel Esteban SRL',
     type: 'client',

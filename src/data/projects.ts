@@ -66,7 +66,7 @@ export const projects: Project[] = [
       value: 'e-CF',
       label: { es: 'factura electrónica para la DGII', en: 'electronic invoicing for the DGII' },
     },
-    liveUrl: 'https://pos-leo-dev.netlify.app',
+    liveUrl: 'https://pos-leo-dev.pages.dev',
   },
   {
     id: 'mme',
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Netlify'],
     image: '/projects/mme-1200.webp',
     imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
-    liveUrl: 'https://multiserviciosmanuelesteban.netlify.app',
+    liveUrl: 'https://multiservicios-manuel-esteban.pages.dev',
   },
   {
     id: 'monitorsuite',

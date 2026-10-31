@@ -6,3 +6,10 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# El sitio se mudó a leodevrd.com (Cloudflare Pages, ignora este archivo): 301 para conservar el SEO.
+[[redirects]]
+  from = "https://leodev-rd.netlify.app/*"
+  to = "https://leodevrd.com/:splat"
+  status = 301
+  force = true

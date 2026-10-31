@@ -1,6 +1,6 @@
 # Leo Dev — Portafolio de Leandro Perdomo
 
-Sitio de [Leo Dev](https://leodev-rd.netlify.app): landing pages, sitios web para negocios y software a medida en C# / .NET, desde República Dominicana.
+Sitio de [Leo Dev](https://leodevrd.com): landing pages, sitios web para negocios y software a medida en C# / .NET, desde República Dominicana.
 
 [![CI](https://github.com/perdomosoto03/portafolio-leo-dev/actions/workflows/ci.yml/badge.svg)](https://github.com/perdomosoto03/portafolio-leo-dev/actions/workflows/ci.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43dce691-e3c1-48fa-a98b-91074efbbe9a/deploy-status)](https://app.netlify.com/projects/leodev-rd/deploys)

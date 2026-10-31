@@ -22,7 +22,7 @@ const fontPreload = (): Plugin => ({
 })
 
 // Genera sitemap.xml en cada build con la fecha del día (antes había que editarla a mano).
-const SITE_URL = 'https://leodev-rd.netlify.app/'
+const SITE_URL = 'https://leodevrd.com/'
 const sitemap = (): Plugin => ({
   name: 'sitemap',
   apply: 'build',

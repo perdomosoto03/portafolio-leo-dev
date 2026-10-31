@@ -61,7 +61,7 @@ export const projects: Project[] = [
         'Presentation site published and in the stage before the pilot with the first client',
       ],
     },
-    tech: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'PWA', 'e-CF / Alanube', 'Vitest'],
+    tech: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Docker', 'PWA', 'IndexedDB', 'e-CF / Alanube', 'Vitest'],
     highlight: {
       value: 'e-CF',
       label: { es: 'factura electrónica para la DGII', en: 'electronic invoicing for the DGII' },
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         'WhatsApp button across the whole site',
       ],
     },
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Netlify'],
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Netlify'],
     image: '/projects/mme-1200.webp',
     imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
     liveUrl: 'https://multiserviciosmanuelesteban.netlify.app',

@@ -14,8 +14,8 @@ export const site = {
 }
 
 export const stack = {
-  frontend: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'HTML / CSS', 'JavaScript'],
-  backend: ['C#', '.NET 8', 'Worker Services', 'IHost / DI'],
-  tools: ['Git', 'VS Code', 'Netlify', 'Claude Code', 'SEO técnico'],
+  frontend: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'PWA', 'HTML / CSS', 'JavaScript'],
+  backend: ['C#', '.NET 8', 'Worker Services', 'Node.js', 'Fastify', 'PostgreSQL', 'Docker', 'Python'],
+  tools: ['Git y GitHub', 'GitHub Actions', 'Netlify', 'Vitest', 'Playwright', 'Remotion', 'Claude Code', 'SEO técnico'],
   infra: ['Soporte TI', 'Redes LAN', 'Cableado estructurado', 'POS', 'Odoo', 'TeamViewer'],
 }

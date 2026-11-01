@@ -22,9 +22,9 @@ export const strings = {
       caption2: 'Soporte TIC · ITLA',
       photoAlt: 'Leandro Perdomo sentado en una silla plegable, retrato en blanco y negro',
       facts: [
-        { v: '150', d: 'sucursales usan un monitor .NET que desarrollé' },
+        { v: '2 semanas', d: 'para publicar tu sitio, desde que tengo tu material' },
         { v: '30 días', d: 'de ajustes sin costo después de publicar' },
-        { v: 'ES / EN', d: 'sitios bilingües con React y TypeScript' },
+        { v: '150', d: 'sucursales de una cadena usan software que desarrollé' },
       ],
     },
     services: {
@@ -36,6 +36,17 @@ export const strings = {
         { t: 'Software a medida', d: 'Herramientas internas, servicios de Windows y automatizaciones en C# / .NET para resolver procesos de tu empresa.', tags: ['C#', '.NET 8', 'Servicios de Windows'] },
         { t: 'Dominio, hosting y soporte', d: 'Me encargo de publicar tu sitio, el dominio y el hosting. Incluye 30 días de ajustes sin costo.', tags: ['Dominio', 'Hosting', '30 días de ajustes'] },
       ],
+    },
+    pricing: {
+      title: 'Precios',
+      label: 'Desde cuánto, sin sorpresas',
+      from: 'Desde',
+      items: [
+        { t: 'Landing page', price: 'RD$ 15,000', d: 'Una página enfocada en convertir visitas en clientes, con botón directo a WhatsApp.' },
+        { t: 'Sitio de varias páginas', price: 'RD$ 25,000', d: 'Páginas por servicio, formulario de cotización y SEO básico para aparecer en Google.' },
+      ],
+      note: 'Precios sin ITBIS. El dominio y el hosting se pagan aparte. El precio final depende de lo que necesite tu negocio y te lo doy en una cotización clara antes de empezar.',
+      cta: 'Pide tu cotización',
     },
     projects: {
       title: 'Proyectos',
@@ -99,9 +110,9 @@ export const strings = {
       caption2: 'IT Support · ITLA',
       photoAlt: 'Leandro Perdomo sitting on a folding chair, black and white portrait',
       facts: [
-        { v: '150', d: 'branches run a .NET monitor I built' },
+        { v: '2 weeks', d: 'to launch your site, once I have your material' },
         { v: '30 days', d: 'of free tweaks after launch' },
-        { v: 'ES / EN', d: 'bilingual sites with React and TypeScript' },
+        { v: '150', d: 'branches of a chain run software I built' },
       ],
     },
     services: {
@@ -113,6 +124,17 @@ export const strings = {
         { t: 'Custom software', d: 'Internal tools, Windows services and automations in C# / .NET to solve your company processes.', tags: ['C#', '.NET 8', 'Windows services'] },
         { t: 'Domain, hosting & support', d: 'I handle publishing, domain and hosting. Includes 30 days of free tweaks.', tags: ['Domain', 'Hosting', '30 days of tweaks'] },
       ],
+    },
+    pricing: {
+      title: 'Pricing',
+      label: 'Starting prices, no surprises',
+      from: 'From',
+      items: [
+        { t: 'Landing page', price: 'RD$ 15,000', d: 'A single page built to turn visitors into clients, with a direct WhatsApp button.' },
+        { t: 'Multi-page website', price: 'RD$ 25,000', d: 'A page per service, a quote form and basic SEO to show up on Google.' },
+      ],
+      note: 'Prices exclude ITBIS (sales tax). Domain and hosting are paid separately. The final price depends on what your business needs, and you get a clear quote before we start.',
+      cta: 'Get your quote',
     },
     projects: {
       title: 'Projects',

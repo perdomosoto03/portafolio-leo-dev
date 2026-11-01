@@ -28,6 +28,43 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'mme',
+    title: 'Multiservicios Manuel Esteban SRL',
+    type: 'client',
+    year: '2026',
+    category: { es: 'Sitio web para cliente', en: 'Client website' },
+    summary: {
+      es: 'Sitio profesional para empresa dominicana de control de plagas enfocada en cocinas profesionales.',
+      en: 'Professional website for a Dominican pest-control company focused on commercial kitchens.',
+    },
+    problem: {
+      es: 'La empresa necesitaba un sitio profesional para mostrar sus servicios y recibir solicitudes de cotización.',
+      en: 'The company needed a professional site to showcase its services and receive quote requests.',
+    },
+    solution: {
+      es: 'Sitio multipágina con página por servicio, solicitud de cotización, zona de cobertura y contacto directo por WhatsApp.',
+      en: 'Multi-page site with a page per service, quote request, coverage area and direct WhatsApp contact.',
+    },
+    results: {
+      es: [
+        '5 servicios con página propia',
+        'SEO técnico: sitemap, robots y metadatos Open Graph',
+        'Carga por partes (code splitting) para abrir rápido en móvil',
+        'Botón de WhatsApp en todo el sitio',
+      ],
+      en: [
+        '5 services, each with its own page',
+        'Technical SEO: sitemap, robots and Open Graph metadata',
+        'Code splitting for fast loading on mobile',
+        'WhatsApp button across the whole site',
+      ],
+    },
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Netlify'],
+    image: '/projects/mme-1200.webp',
+    imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
+    liveUrl: 'https://multiservicios-manuel-esteban.pages.dev',
+  },
+  {
     id: 'posleodev',
     title: 'POS Leo Dev',
     type: 'software',
@@ -67,43 +104,6 @@ export const projects: Project[] = [
       label: { es: 'factura electrónica para la DGII', en: 'electronic invoicing for the DGII' },
     },
     liveUrl: 'https://pos-leo-dev.pages.dev',
-  },
-  {
-    id: 'mme',
-    title: 'Multiservicios Manuel Esteban SRL',
-    type: 'client',
-    year: '2026',
-    category: { es: 'Sitio web para cliente', en: 'Client website' },
-    summary: {
-      es: 'Sitio profesional para empresa dominicana de control de plagas enfocada en cocinas profesionales.',
-      en: 'Professional website for a Dominican pest-control company focused on commercial kitchens.',
-    },
-    problem: {
-      es: 'La empresa necesitaba un sitio profesional para mostrar sus servicios y recibir solicitudes de cotización.',
-      en: 'The company needed a professional site to showcase its services and receive quote requests.',
-    },
-    solution: {
-      es: 'Sitio multipágina con página por servicio, solicitud de cotización, zona de cobertura y contacto directo por WhatsApp.',
-      en: 'Multi-page site with a page per service, quote request, coverage area and direct WhatsApp contact.',
-    },
-    results: {
-      es: [
-        '5 servicios con página propia',
-        'SEO técnico: sitemap, robots y metadatos Open Graph',
-        'Carga por partes (code splitting) para abrir rápido en móvil',
-        'Botón de WhatsApp en todo el sitio',
-      ],
-      en: [
-        '5 services, each with its own page',
-        'Technical SEO: sitemap, robots and Open Graph metadata',
-        'Code splitting for fast loading on mobile',
-        'WhatsApp button across the whole site',
-      ],
-    },
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Netlify'],
-    image: '/projects/mme-1200.webp',
-    imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
-    liveUrl: 'https://multiservicios-manuel-esteban.pages.dev',
   },
   {
     id: 'monitorsuite',

@@ -1,0 +1,22 @@
+# Leo Dev
+
+> Leandro Perdomo Soto, desarrollador en República Dominicana. Hago páginas web y landing pages para negocios dominicanos y software a medida en C# / .NET. Se trabaja directo conmigo, sin agencia.
+
+## Servicios
+
+- [Diseño web en República Dominicana](https://leodevrd.com/diseno-web-republica-dominicana): landing page desde RD$ 15,000 y sitio de varias páginas desde RD$ 25,000, sin ITBIS. Publicado en 2 semanas desde que tengo tu material, con 30 días de ajustes sin costo.
+- Software a medida: herramientas internas, servicios de Windows y automatizaciones en C# / .NET.
+- Dominio, hosting y soporte: me encargo de publicar el sitio, el dominio y el hosting.
+
+## Proyectos
+
+- [Multiservicios Manuel Esteban](https://leodevrd.com/proyectos/multiservicios-manuel-esteban): sitio de varias páginas para una empresa dominicana de control de plagas, con cinco servicios, cotización en línea y WhatsApp.
+- [POS Leo Dev](https://pos-leo-dev.pages.dev): punto de venta en la nube para colmados, bodegas, ferreterías y tiendas, con factura electrónica e-CF para la DGII.
+- MainScreenDS Monitor Suite: supervisor en C# / .NET que mantiene funcionando las pizarras deportivas de una cadena con 150 sucursales.
+
+## Contacto
+
+- [Portafolio](https://leodevrd.com/)
+- WhatsApp: [829-477-5920](https://wa.me/18294775920)
+- [GitHub](https://github.com/perdomosoto03)
+- [LinkedIn](https://www.linkedin.com/in/leandro-perdomo-84a28b202/)

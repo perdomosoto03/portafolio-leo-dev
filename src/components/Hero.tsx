@@ -19,7 +19,7 @@ export function Hero() {
 
         <h1 className="col-span-12 m-0 font-display text-[clamp(72px,24vw,160px)] font-black uppercase leading-[0.82] tracking-[-0.02em] condensed lg:col-span-8 lg:text-[clamp(88px,15.4vw,230px)]">
           <span className="block animate-rise">{h.first}</span>{' '}
-          <span className="outline-text block animate-rise [animation-delay:80ms]">{h.last}</span>
+          <span className="outline-text block animate-rise [animation-delay:80ms]">{h.last}</span><span className="sr-only">{h.h1Extra}</span>
         </h1>
 
         <figure className="order-1 col-span-12 m-0 mt-10 self-start lg:order-0 lg:col-span-4 lg:col-start-9 lg:row-span-2 lg:row-start-2 lg:mt-0">

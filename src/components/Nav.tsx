@@ -32,7 +32,7 @@ function LangToggle({ className = '' }: { className?: string }) {
 
 function ThemeToggle({ className = '' }: { className?: string }) {
   const { t } = useLang()
-  const theme = useSyncExternalStore<Theme>(subscribeTheme, getTheme)
+  const theme = useSyncExternalStore<Theme>(subscribeTheme, getTheme, () => 'light')
   return (
     <button
       type="button"
@@ -130,17 +130,18 @@ function MobileMenu({ links, onClose }: { links: Links; onClose: () => void }) {
   )
 }
 
-export function Nav() {
+// base: '' en la portada; '/' en las demás páginas, para que los enlaces a secciones lleven a la portada.
+export function Nav({ base = '' }: { base?: string }) {
   const { t } = useLang()
   const [open, setOpen] = useState(false)
   const menuBtn = useRef<HTMLButtonElement>(null)
   const wasOpen = useRef(false)
   const links: Links = [
-    ['#proyectos', t.nav.projects],
-    ['#servicios', t.nav.services],
-    ['#proceso', t.nav.process],
-    ['#sobre-mi', t.nav.about],
-    ['#contacto', t.nav.contact],
+    [`${base}#proyectos`, t.nav.projects],
+    [`${base}#servicios`, t.nav.services],
+    [`${base}#proceso`, t.nav.process],
+    [`${base}#sobre-mi`, t.nav.about],
+    [`${base}#contacto`, t.nav.contact],
   ]
 
   // Al cerrar el menú, el foco vuelve al botón "Menú".
@@ -154,7 +155,7 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-paper">
       <nav className="wrap grid h-14 grid-cols-[1fr_auto] items-center gap-6 lg:grid-cols-[1fr_auto_1fr]">
-        <a href="#top" className="justify-self-start font-display text-xl font-extrabold uppercase tracking-[-0.01em] condensed">
+        <a href={`${base}#top`} className="justify-self-start font-display text-xl font-extrabold uppercase tracking-[-0.01em] condensed">
           {site.brand}<sup className="ml-0.5 text-[10px] font-medium">®</sup>
         </a>
         <ul className="hidden gap-7 text-sm lg:flex">

@@ -1,12 +1,13 @@
 import { useLang } from '../i18n/LangContext'
 import { site } from '../data/site'
 import { waLink } from '../lib/wa'
+import { designPath } from '../pages'
 import { NewTab } from './Common'
 
 const year = new Date().getFullYear()
 
 /* Footer = contacto. Bloque de tinta en modo claro, superficie oscura en modo oscuro. */
-export function Footer() {
+export function Footer({ base = '' }: { base?: string }) {
   const { t } = useLang()
   const muted = 'text-paper/60 dark:text-ink-soft'
   const col = 'grid content-start gap-2 text-[15px]'
@@ -31,9 +32,10 @@ export function Footer() {
           </div>
           <div className={`${col} lg:col-span-2`}>
             <span className={lbl}>{t.footer.site}</span>
-            <a href="#proyectos" className="hover:text-signal">{t.nav.projects}</a>
-            <a href="#servicios" className="hover:text-signal">{t.nav.services}</a>
-            <a href="#sobre-mi" className="hover:text-signal">{t.nav.about}</a>
+            <a href={`${base}#proyectos`} className="hover:text-signal">{t.nav.projects}</a>
+            <a href={`${base}#servicios`} className="hover:text-signal">{t.nav.services}</a>
+            <a href={`${base}#sobre-mi`} className="hover:text-signal">{t.nav.about}</a>
+            {!base && <a href={designPath} className="hover:text-signal">{t.footer.design}</a>}
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import { useLang } from '../i18n/LangContext'
+import { designPath } from '../pages'
 import { SectionHead } from './Common'
 
 export function Services() {
@@ -18,6 +19,7 @@ export function Services() {
             </li>
           ))}
         </ul>
+        <a href={designPath} className="link-cta mt-8 inline-block">{t.services.more}</a>
       </div>
     </section>
   )

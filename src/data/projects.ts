@@ -4,6 +4,8 @@
 //  Sin imagen: usa highlight (cifra grande) o codeSnippet.
 //  Ojo: no publiques código de proyectos de una empresa.
 // ─────────────────────────────────────────────────────────────
+import { mmeCasePath } from '../pages'
+
 export type Lang = 'es' | 'en'
 type T = Record<Lang, string>
 
@@ -22,6 +24,7 @@ export interface Project {
   highlight?: { value: string; label: T } // cifra grande si no hay imagen
   liveUrl?: string
   repoUrl?: string
+  casePath?: string // página propia del caso (ver src/pages.ts)
   year: string
   type: 'client' | 'software'
 }
@@ -59,10 +62,11 @@ export const projects: Project[] = [
         'WhatsApp button across the whole site',
       ],
     },
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Netlify'],
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Vitest', 'Playwright', 'GitHub Actions', 'Cloudflare Pages'],
     image: '/projects/mme-1200.webp',
     imageSrcSet: '/projects/mme-600.webp 600w, /projects/mme-1200.webp 1200w',
     liveUrl: 'https://multiservicios-manuel-esteban.pages.dev',
+    casePath: mmeCasePath,
   },
   {
     id: 'posleodev',
@@ -79,8 +83,8 @@ export const projects: Project[] = [
       en: 'Under Law 32-23, businesses with an RNC must move to electronic fiscal receipts (e-CF). Many small stores have no checkout system that issues them, nor a way to follow sales from their phone.',
     },
     solution: {
-      es: 'Aplicación web (PWA) con API en Node.js y PostgreSQL multi-negocio con seguridad por filas. La caja funciona sin internet y sincroniza después sin duplicar ventas. La factura e-CF sale por una cola de reintentos conectada por API a Alanube, un proveedor autorizado por la DGII.',
-      en: 'Web app (PWA) with a Node.js API and a multi-business PostgreSQL database with row-level security. The register works offline and syncs later without duplicating sales. The e-CF invoice goes through a retry queue connected by API to Alanube, a DGII-authorized provider.',
+      es: 'Aplicación web (PWA) con API en Node.js y PostgreSQL multi-negocio con seguridad por filas. La caja funciona sin internet y sincroniza después sin duplicar ventas. La factura e-CF sale por una cola de reintentos conectada por API a un proveedor autorizado por la DGII.',
+      en: 'Web app (PWA) with a Node.js API and a multi-business PostgreSQL database with row-level security. The register works offline and syncs later without duplicating sales. The e-CF invoice goes through a retry queue connected by API to a DGII-authorized provider.',
     },
     results: {
       es: [
@@ -98,7 +102,7 @@ export const projects: Project[] = [
         'Presentation site published and in the stage before the pilot with the first client',
       ],
     },
-    tech: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Docker', 'PWA', 'IndexedDB', 'e-CF / Alanube', 'Vitest'],
+    tech: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Docker', 'PWA', 'IndexedDB', 'e-CF / DGII', 'Vitest'],
     highlight: {
       value: 'e-CF',
       label: { es: 'factura electrónica para la DGII', en: 'electronic invoicing for the DGII' },

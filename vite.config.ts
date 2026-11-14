@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
+import { designUrl, mmeCaseUrl } from './src/pages.ts'
 
 // Precarga las dos fuentes latinas del sitio para que el texto del hero no salte al cargar (CLS).
 // Los nombres llevan hash, así que se buscan en el bundle final.
@@ -34,6 +35,8 @@ const sitemap = (): Plugin => ({
       source: `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${SITE_URL}</loc><lastmod>${today}</lastmod></url>
+  <url><loc>${designUrl}</loc><lastmod>${today}</lastmod></url>
+  <url><loc>${mmeCaseUrl}</loc><lastmod>${today}</lastmod></url>
 </urlset>
 `,
     })

@@ -50,8 +50,8 @@ function ProjectRow({ p, open, onToggle }: { p: Project; open: boolean; onToggle
           aria-controls={panelId}
           className="group relative grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1.5 py-6 text-left transition-[padding] duration-300 md:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,1fr)_auto] [@media(hover:hover)]:hover:pl-3"
         >
-          <span className="row-title transition-colors group-hover:text-signal">{p.title}</span>
-          <span className="label col-start-1 row-start-2 md:col-start-auto md:row-start-auto">{p.category[lang]}</span>
+          <span className="row-title transition-colors group-hover:text-signal">{p.title}</span>{' '}
+          <span className="label col-start-1 row-start-2 md:col-start-auto md:row-start-auto">{p.category[lang]}</span>{' '}
           <span className="label hidden md:block">{p.year}</span>
           <span aria-hidden="true" className="col-start-2 row-start-1 w-6 text-center font-display text-3xl leading-none md:col-start-auto md:row-start-auto">
             {open ? '−' : '+'}
@@ -99,6 +99,7 @@ function ProjectRow({ p, open, onToggle }: { p: Project; open: boolean; onToggle
               <p className="mt-2 text-ink-soft">{p.tech.join(' · ')}</p>
             </div>
             <div className="flex flex-wrap gap-6">
+              {p.casePath && <a href={p.casePath} className="link-cta">{t.projects.caseStudy}</a>}
               {p.liveUrl ? (
                 <a href={p.liveUrl} target="_blank" rel="noreferrer" className="link-cta inline-flex items-center gap-1">
                   {t.projects.live}<NewTab /><ExternalIcon className="h-4 w-4" />
